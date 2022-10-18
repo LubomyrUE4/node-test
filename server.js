@@ -60,7 +60,7 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(port, '0.0.0.0', () =>
+http.listen(port, () =>
   console.log(
     `Listening on port ${port}, process env = ${process.env.NODE_ENV}`
   )
