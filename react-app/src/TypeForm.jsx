@@ -26,7 +26,7 @@ const TypeForm = ({ passDataUpstream, isMobile }) => {
     !isMobile &&
       typeformEmbed.makeWidget(
         typeformComponent.current,
-        `https://z8ivgb8lhnl.typeform.com/to/rye8VWC5#${queryStr}`,
+        `http://z8ivgb8lhnl.typeform.com/to/rye8VWC5#${queryStr}`,
         {
           hideScrollbars: true,
           hideHeaders: true,
