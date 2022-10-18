@@ -14,7 +14,7 @@ const { generateEmail } = require("./emailGenerator");
 
 //initialise express and define a port
 const port = process.env.PORT || 5000;
-const client = require("socket.io-client")("http://ec2-18-212-98-168.compute-1.amazonaws.com:" + port);
+const client = require("socket.io-client")("http://54.208.21.200:" + port);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
