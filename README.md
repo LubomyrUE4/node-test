@@ -11,20 +11,20 @@ When a user fills in the survey, their data first goes to Typeform, which keeps 
 
 - Run `npm i` (installs server's node modules)
 - Run `npm run install-react` (installs react's node modules)
-- For development, run `npm run dev`. The express server will be avalialble at localhost:5000. The React app will start at localhost:3000.
+- For development, run `npm run dev`. The express server will be avalialble at ec2-18-212-98-168.compute-1.amazonaws.com:5000. The React app will start at ec2-18-212-98-168.compute-1.amazonaws.com:3000.
 
 ## Webhooks and Ngrok
 
-The React features an embeded Typeform. In order for the site to work with the embedded Typeform locally, you will need to expose your localhost to Typeform via webhooks. There are a couple of ways of doing this. The following details setting up Ngrok:
+The React features an embeded Typeform. In order for the site to work with the embedded Typeform locally, you will need to expose your ec2-18-212-98-168.compute-1.amazonaws.com to Typeform via webhooks. There are a couple of ways of doing this. The following details setting up Ngrok:
 
 Download Ngrok from `https://ngrok.com/download` and create an account. Then, navigate to the folder where Ngrok is located and run:
 
-`./ngrok http 3000 -host-header="localhost:3000"`
+`./ngrok http 3000 -host-header="ec2-18-212-98-168.compute-1.amazonaws.com:3000"`
 
 Your terminal should present you with two urls in the form:
 
-`http://[random url].ngrok.io -> http://localhost:3000`
-`https://[random url].ngrok.io -> http://localhost:3000`
+`http://[random url].ngrok.io -> http://ec2-18-212-98-168.compute-1.amazonaws.com:3000`
+`https://[random url].ngrok.io -> http://ec2-18-212-98-168.compute-1.amazonaws.com:3000`
 
 - Copy the https ngrok url to your clipboard.
 
@@ -38,7 +38,7 @@ Your terminal should present you with two urls in the form:
 
 Ngrok generates a random URL each time it is started. To get a consitstent URL name, you must buy a subscription to Ngrok ~$7/month. You can then run the following command:
 
-`./ngrok http 3000 -hostname=<yourchosenname>.ngrok.io -host-header="localhost:3000"`
+`./ngrok http 3000 -hostname=<yourchosenname>.ngrok.io -host-header="ec2-18-212-98-168.compute-1.amazonaws.com:3000"`
 
 This will allow you to have a consistent URL that you expose to Typeform.
 
