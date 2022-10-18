@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Router } from "@reach/router";
-import HttpsRedirect from "react-https-redirect";
 
 import App from "./App";
 
@@ -10,11 +9,9 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
-  <HttpsRedirect>
-    <Router>
-      <App path="/" />
-    </Router>
-  </HttpsRedirect>,
+  <Router>
+    <App path="/" />
+  </Router>,
   document.getElementById("root")
 );
 
