@@ -83,9 +83,9 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 7. So, you can click `Launch istance` now, then go to `Instances` tab and wait for the instance to get running.
 8. In order to make the instance fully public, you would have to go to `Secutiry` tab, select the attached secutiry group.
 [![image.png](https://i.postimg.cc/q7yhMdDS/image.png)](https://postimg.cc/rdyFQ7kN)
-9. There click `Edit inbound rules` and add a new `All traffic` rule with '0.0.0.0/0' CIDR block.
+9. There click `Edit inbound rules` and add a new All traffic rule with '0.0.0.0/0' CIDR block.
 [![image.png](https://i.postimg.cc/k5JG9t86/image.png)](https://postimg.cc/mPnBykmB)
-10. Once your EC2 instance gets the running state, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal.
+10. Once your EC2 instance gets running, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal.
 [![image.png](https://i.postimg.cc/BQ96hzhn/image.png)](https://postimg.cc/fkCDy8nG)
 11. Once you are connected, you see that there are no files there and all the required tools have to be installed.
 12. First of all, install the `npm`: 
