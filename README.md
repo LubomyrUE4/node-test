@@ -85,7 +85,7 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 [![image.png](https://i.postimg.cc/q7yhMdDS/image.png)](https://postimg.cc/rdyFQ7kN)
 9. There click `Edit inbound rules` and add a new All traffic rule with '0.0.0.0/0' CIDR block.
 [![image.png](https://i.postimg.cc/k5JG9t86/image.png)](https://postimg.cc/mPnBykmB)
-10. Once your EC2 instance gets running, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal. Please make sure you are in the same folder in terminal where your key .pem file is located.
+10. If you see that your EC2 instanse has running state, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal. Please make sure you are in the same folder in terminal where your key .pem file is located.
 [![image.png](https://i.postimg.cc/BQ96hzhn/image.png)](https://postimg.cc/fkCDy8nG)
 11. Once you are connected, you can see that there are no files and all the required tools have to be installed.
 12. First of all, install the `npm`: 
