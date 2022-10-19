@@ -68,3 +68,20 @@ We have a Heroku pipeline set up, with a staging site (https://point-7-staging.h
 - Heroku, checking the site can be built if the branch is merges. All tests in the `./tests` folder will also be run. (This check takes around 5 minutes).
 
 Please check with Matt if you have not merged a pull reuqest before, or if either of these checks are failing. Once the branch is merged into master, an updated build will automatically be run in the staging site. Heroku will send a notification to slack when the build is done. To see site statuses, log into the Heroku dashboard (ask Matt for login details). The Heorku dashboard also has the 'promote to production' button, which moves the staging site to production.
+
+
+# EC2 deployment
+1. Go to www.aws.amazon.com to create a new EC2 instance
+2. Sign in to console
+3. Select services tab at the top, then select EC2 under Compute, and this will bring up EC2 dashboard
+[![image.png](https://i.postimg.cc/cJwSkJP6/image.png)](https://postimg.cc/zLz6Vqz1)
+5. Select Launch Instance
+
+- Run `sudo apt update`
+- sudo apt install npm
+- sudo apt install git
+- git clone <repository_url>
+- npm i
+- npm run install-react
+- sudo npm install pm2 -g
+- pm2 start npm --name "your-app-name" -- run "dev"
