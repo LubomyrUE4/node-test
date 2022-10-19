@@ -71,7 +71,7 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 
 
 # EC2 deployment
-1. Go to `www.aws.amazon.com` and sign in to your console
+1. Go to www.aws.amazon.com and sign in to your console
 2. Select services tab at the top, then select EC2 under Compute, and this will bring up EC2 dashboard
 
 [![image.png](https://i.postimg.cc/cJwSkJP6/image.png)](https://postimg.cc/zLz6Vqz1)
