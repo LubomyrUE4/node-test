@@ -103,4 +103,4 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 16. In order to make sure your application is working you should go to either `Public IPv4 address` or `Public IPv4 DNS` address and in our case the `:3000` ending for the port (make sure you use the 'http', because the 'https' is not supported yet)
 [![image.png](https://i.postimg.cc/rssqsvN5/image.png)](https://postimg.cc/gXCCBt50)
 Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
-17. NGINX or AWS Load balancer are the tools required for having our application running on default 80/443 ports (without any ':3000' in URL).
+17. NGINX or AWS Load balancer are the tools required for having our application running on default 80/443 ports (without any ':3000' in URL). They would allow you to add SSL certificates and have your application running on the HTTPS.
