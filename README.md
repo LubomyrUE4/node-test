@@ -73,20 +73,32 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 # EC2 deployment
 1. Go to `www.aws.amazon.com` and sign in to your console
 2. Select services tab at the top, then select EC2 under Compute, and this will bring up EC2 dashboard
+
 [![image.png](https://i.postimg.cc/cJwSkJP6/image.png)](https://postimg.cc/zLz6Vqz1)
+
 3. Select Launch Instance
 4. There you should enter the name of your instance, set Amazon Machine Image (AMI) to Ubuntu, use the default Instance type (t2.micro).
 5. Now you have to create a key pair in order to be able to connect to your instance. Here you should enter the name, and in case you are using PuTTY select the .ppk private key file format. Then you should save the key file on your computer.
+
 [![image.png](https://i.postimg.cc/VkTHM2Bz/image.png)](https://postimg.cc/yDmPCQbG)
+
 6. For Network settings you should use the default settings, except for `Allow HTTP/HTTPs traffic from the internet` checkboxes, you need to enable them.
+
 [![image.png](https://i.postimg.cc/Hk2yFp5W/image.png)](https://postimg.cc/DSS0X3BR)
+
 7. So, you can click `Launch istance` now, then go to `Instances` tab and wait for the instance to get running.
 8. In order to make the instance fully public, you would have to go to `Secutiry` tab, select the attached secutiry group.
+
 [![image.png](https://i.postimg.cc/q7yhMdDS/image.png)](https://postimg.cc/rdyFQ7kN)
+
 9. There click `Edit inbound rules` and add a new All traffic rule with '0.0.0.0/0' CIDR block.
+
 [![image.png](https://i.postimg.cc/k5JG9t86/image.png)](https://postimg.cc/mPnBykmB)
+
 10. If you see that your EC2 instanse has running state, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal. Please make sure you are in the same folder in terminal where your key .pem file is located.
+
 [![image.png](https://i.postimg.cc/BQ96hzhn/image.png)](https://postimg.cc/fkCDy8nG)
+
 11. Once you are connected, you can see that there are no files and all the required tools have to be installed.
 12. First of all, install the `npm`: 
 - Run `sudo apt update` (download package information from all configured sources)
@@ -101,6 +113,8 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 - `sudo npm install pm2 -g`
 - `pm2 start npm --name "your-app-name" -- run "dev"`
 16. In order to make sure your application is working you should go to either `Public IPv4 address` or `Public IPv4 DNS` address and in our case the `:3000` ending for the port (make sure you use the 'http', because the 'https' is not supported yet)
+
 [![image.png](https://i.postimg.cc/rssqsvN5/image.png)](https://postimg.cc/gXCCBt50)
+
 Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 17. NGINX or AWS Load balancer are the tools required for having our application running on default 80/443 ports (without any ':3000' in URL). They would allow you to add SSL certificates and have your application running on the HTTPS.
