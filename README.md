@@ -85,7 +85,7 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 [![image.png](https://i.postimg.cc/q7yhMdDS/image.png)](https://postimg.cc/rdyFQ7kN)
 9. There click `Edit inbound rules` and add a new `All traffic` rule with '0.0.0.0/0' CIDR block.
 [![image.png](https://i.postimg.cc/k5JG9t86/image.png)](https://postimg.cc/mPnBykmB)
-10. Once your EC2 instance is running, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal.
+10. Once your EC2 instance gets the running state, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal.
 [![image.png](https://i.postimg.cc/BQ96hzhn/image.png)](https://postimg.cc/fkCDy8nG)
 11. Once you are connected, you see that there are no files there and all the required tools have to be installed.
 12. First of all, install the `npm`: 
