@@ -78,9 +78,9 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 4. There you should enter the name of your instance, set Amazon Machine Image (AMI) to Ubuntu, use the default Instance type (t2.micro).
 5. Now you have to create a key pair in order to be able to connect to your instance. Here you should enter the name, and in case you are using PuTTY select the .ppk private key file format. Then you should save the key file on your computer.
 [![image.png](https://i.postimg.cc/VLm2mRpf/image.png)](https://postimg.cc/NLCdx1QS)
-6. For Network settings you should use the default settings and only change set `Allow HTTP/HTTPs traffic from the internet` checkboxes enabled.
+6. For Network settings you should use the default settings and only set `Allow HTTP/HTTPs traffic from the internet` checkboxes enabled.
 [![image.png](https://i.postimg.cc/Hk2yFp5W/image.png)](https://postimg.cc/DSS0X3BR)
-7. You can click `Launch istance` now, then go to `Instances` tab and wait for the instance to get running.
+7. So, you can click `Launch istance` now, then go to `Instances` tab and wait for the instance to get running.
 8. In order to make the instance fully public, you would have to go to `Secutiry` tab, select the attached secutiry group.
 [![image.png](https://i.postimg.cc/q7yhMdDS/image.png)](https://postimg.cc/rdyFQ7kN)
 9. There click `Edit inbound rules` and add a new `All traffic` rule with '0.0.0.0/0' CIDR block.
