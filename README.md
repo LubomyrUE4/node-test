@@ -71,12 +71,16 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 
 
 # EC2 deployment
-1. Go to www.aws.amazon.com to create a new EC2 instance
-2. Sign in to console
-3. Select services tab at the top, then select EC2 under Compute, and this will bring up EC2 dashboard
+1. Go to www.aws.amazon.com and sign in to your console
+2. Select services tab at the top, then select EC2 under Compute, and this will bring up EC2 dashboard
 [![image.png](https://i.postimg.cc/cJwSkJP6/image.png)](https://postimg.cc/zLz6Vqz1)
-5. Select Launch Instance
-
+3. Select Launch Instance
+4. There you should enter the name of your instance, set Amazon Machine Image (AMI) to Ubuntu, use the default Instance type (t2.micro).
+5. Now you have to create a key pair in order to be able to connect to your instance. Here you should enter the name, and in case you are using PuTTY select the .ppk private key file format. Then you should save the key file on your computer.
+[![image.png](https://i.postimg.cc/VLm2mRpf/image.png)](https://postimg.cc/NLCdx1QS)
+6. For Network settings you should use the default settings and only change set `Allow HTTP/HTTPs traffic from the internet` checkboxes enabled.
+[![image.png](https://i.postimg.cc/Hk2yFp5W/image.png)](https://postimg.cc/DSS0X3BR)
+7. Then you can click on `Laucnh istance` and wait for it to get running.
 - Run `sudo apt update`
 - sudo apt install npm
 - sudo apt install git
