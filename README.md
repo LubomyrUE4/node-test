@@ -1,3 +1,9 @@
+
+
+
+https://user-images.githubusercontent.com/45606434/142765229-35c06c72-9c96-4626-8260-65094dbbd3e9.mp4
+
+
 # Project structure
 
 - NodeJS backend. Express server in `/server.js`. API calls to members-api.parliament.uk/api are hmade in `api-calls.js`.
@@ -34,7 +40,7 @@ Your terminal should present you with two urls in the form:
 
 `https://[random url].ngrok.io/hook`
 
--Navigate to 'View Deliveries' then click 'send test request'. If it is working, you should see a 200 OK status response in Typeform's webhook interface and also in the terminal in which you are running Ngrok from.
+-Click 'send test request'. If it is working, you should see a 200 OK status response in Typeform's webhook interface and also in the terminal in which you are running Ngrok from.
 
 Ngrok generates a random URL each time it is started. To get a consitstent URL name, you must buy a subscription to Ngrok ~$7/month. You can then run the following command:
 
