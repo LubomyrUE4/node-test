@@ -92,15 +92,15 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 - Run `sudo apt update` (download package information from all configured sources)
 - Run `sudo apt install npm` (installs the tool for launching the Node.js/React.js project)
 13. Then you would need `git` for cloning the repository to your EC2 machine:
-- sudo apt install git
-- git clone <repository_url>
+- `sudo apt install git`
+- `git clone <repository_url>`
 14. Now you should go to the cloned repository by running `cd <repository_name` and start the application (see Setup above):
-- npm i
-- npm run install-react
+- `npm i`
+- `npm run install-react`
 15. But now it is better to avoid the 3rd command (`npm run dev`) and use the PM2 tool instead. It helps facilitate production deployments and enables you to keep running applications alive indefinitely. So, you have to install PM2 and run the application using it:
-- sudo npm install pm2 -g
-- pm2 start npm --name "your-app-name" -- run "dev"
-16. In order to make sure your application is working you should go to either `Public IPv4 address` or `Public IPv4 DNS` address and the `:3000` ending in our case for the port (make sure you use the `http`, because the `https` is not supported yet)
+- `sudo npm install pm2 -g`
+- `pm2 start npm --name "your-app-name" -- run "dev"`
+16. In order to make sure your application is working you should go to either `Public IPv4 address` or `Public IPv4 DNS` address and in our case the `:3000` ending for the port (make sure you use the `http`, because the `https` is not supported yet)
 [![image.png](https://i.postimg.cc/rssqsvN5/image.png)](https://postimg.cc/gXCCBt50)
 Example - http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000
 17. NGINX or AWS Load balancer are the tools required for having our application running on default 80/443 ports (without any ':3000' in URL).
