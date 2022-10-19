@@ -77,7 +77,7 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 3. Select Launch Instance
 4. There you should enter the name of your instance, set Amazon Machine Image (AMI) to Ubuntu, use the default Instance type (t2.micro).
 5. Now you have to create a key pair in order to be able to connect to your instance. Here you should enter the name, and in case you are using PuTTY select the .ppk private key file format. Then you should save the key file on your computer.
-[![image.png](https://i.postimg.cc/VLm2mRpf/image.png)](https://postimg.cc/NLCdx1QS)
+[![image.png](https://i.postimg.cc/VkTHM2Bz/image.png)](https://postimg.cc/yDmPCQbG)
 6. For Network settings you should use the default settings, except for `Allow HTTP/HTTPs traffic from the internet` checkboxes, you need to enable them.
 [![image.png](https://i.postimg.cc/Hk2yFp5W/image.png)](https://postimg.cc/DSS0X3BR)
 7. So, you can click `Launch istance` now, then go to `Instances` tab and wait for the instance to get running.
@@ -90,7 +90,7 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 11. Once you are connected, you can see that there are no files and all the required tools have to be installed.
 12. First of all, install the `npm`: 
 - Run `sudo apt update` (download package information from all configured sources)
-- Run `sudo apt install npm` (installs the tool for launching the Node.js/React.js project)
+- Run `sudo apt install npm`
 13. Then you would need `git` for cloning the repository to your EC2 machine:
 - `sudo apt install git`
 - `git clone <repository_url>`
