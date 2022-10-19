@@ -80,12 +80,27 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 [![image.png](https://i.postimg.cc/VLm2mRpf/image.png)](https://postimg.cc/NLCdx1QS)
 6. For Network settings you should use the default settings and only change set `Allow HTTP/HTTPs traffic from the internet` checkboxes enabled.
 [![image.png](https://i.postimg.cc/Hk2yFp5W/image.png)](https://postimg.cc/DSS0X3BR)
-7. Then you can click on `Laucnh istance` and wait for it to get running.
-- Run `sudo apt update`
-- sudo apt install npm
+7. You can click `Launch istance` now, then go to `Instances` tab and wait for the instance to get running.
+8. In order to make the instance fully public, you would have to go to `Secutiry` tab, select the attached secutiry group.
+[![image.png](https://i.postimg.cc/q7yhMdDS/image.png)](https://postimg.cc/rdyFQ7kN)
+9. There click `Edit inbound rules` and add a new `All traffic` rule with '0.0.0.0/0' CIDR block.
+[![image.png](https://i.postimg.cc/k5JG9t86/image.png)](https://postimg.cc/mPnBykmB)
+10. Once your EC2 instance is running, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal.
+[![image.png](https://i.postimg.cc/BQ96hzhn/image.png)](https://postimg.cc/fkCDy8nG)
+11. Once you are connected, you see that there are no files there and all the required tools have to be installed.
+12. First of all, install the `npm`: 
+- Run `sudo apt update` (download package information from all configured sources)
+- Run `sudo apt install npm` (installs the tool for launching the Node.js/React.js project)
+13. Then you would need `git` for cloning the repository to your EC2 machine:
 - sudo apt install git
 - git clone <repository_url>
+14. Now you should go to the cloned repository by running `cd <repository_name` and start the application (see Setup above):
 - npm i
 - npm run install-react
+15. But now it is better to avoid the 3rd command (`npm run dev`) and use the PM2 tool instead. It helps facilitate production deployments and enables you to keep running applications alive indefinitely. So, you have to install PM2 and run the application using it:
 - sudo npm install pm2 -g
 - pm2 start npm --name "your-app-name" -- run "dev"
+16. In order to make sure your application is working you should go to either `Public IPv4 address` or `Public IPv4 DNS` address and the `:3000` ending in our case for the port (make sure you use the `http`, because the `https` is not supported yet)
+[![image.png](https://i.postimg.cc/rssqsvN5/image.png)](https://postimg.cc/gXCCBt50)
+Example - http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000
+17. NGINX or AWS Load balancer are the tools required for having our application running on default 80/443 ports (without any ':3000' in URL).
