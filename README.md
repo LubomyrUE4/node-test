@@ -122,7 +122,7 @@ Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 
 [![image.png](https://i.postimg.cc/qRQt2ZMB/image.png)](https://postimg.cc/CBBLg7q9)
 
-18. Then click `Create Load Balancer` and select the `Application Load Balancer`
+18. Then click `Create Load Balancer` and select the `Application Load Balancer`:
 
 [![image.png](https://i.postimg.cc/JtVhyKTK/image.png)](https://postimg.cc/jncTm6YJ)
 
@@ -141,7 +141,7 @@ Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 22. You should use all the default settings, except for Port - set it to 3000
 [![image.png](https://i.postimg.cc/fTk0tg8W/image.png)](https://postimg.cc/QHGMvSLv)
 
-23. The next step is to select our instance, click `Include as pending below` and `Create target group`
+23. The next step is to select our instance, click `Include as pending below` and `Create target group`:
 
 [![image.png](https://i.postimg.cc/25nHp5Wt/image.png)](https://postimg.cc/HJs0XdB0)
 
@@ -154,7 +154,7 @@ Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 
 [![image.png](https://i.postimg.cc/Th89HMwx/image.png)](https://postimg.cc/y3PckGcp)
 
-[![image.png](https://i.postimg.cc/nLs1ZhDx/image.png)](https://postimg.cc/QB37JsmY)
+[![image.png](https://i.postimg.cc/638jqh48/image.png)](https://postimg.cc/HcC4PX2m)
 
 
 27. That is it, in order to test that everything is working, we should open the load balancer address, in my case - http://44.242.131.253 and see that it is working without any additional ports.
