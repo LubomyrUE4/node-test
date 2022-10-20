@@ -122,9 +122,9 @@ Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 
 [![image.png](https://i.postimg.cc/qRQt2ZMB/image.png)](https://postimg.cc/CBBLg7q9)
 
-18. Then click `Create Load Balancer` and select the `Application Load Balancer`:
+18. Then click `Create Load Balancer` and select the `Application Load Balancer`
 
-
+[![image.png](https://i.postimg.cc/Z510XbPX/image.png)](https://postimg.cc/5XSxCMRm)
 
 19. Enter the load balancer name and leave basic configuration as default
 
@@ -155,7 +155,5 @@ Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 [![image.png](https://i.postimg.cc/Th89HMwx/image.png)](https://postimg.cc/y3PckGcp)
 
 [![image.png](https://i.postimg.cc/638jqh48/image.png)](https://postimg.cc/HcC4PX2m)
-
-[![image.png](https://i.postimg.cc/JtVhyKTK/image.png)](https://postimg.cc/jncTm6YJ)
 
 27. That is it, in order to test that everything is working, we should open the load balancer address, in my case - `http://44.242.131.253` and see that it is working without any additional ports.
