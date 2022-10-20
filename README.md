@@ -122,9 +122,9 @@ Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 
 [![image.png](https://i.postimg.cc/qRQt2ZMB/image.png)](https://postimg.cc/CBBLg7q9)
 
-18. Then click `Create Load Balancer` and select the `Application Load Balancer`
+18. Then click `Create Load Balancer` and select the `Application Load Balancer`.
 
-[![image.png](https://i.postimg.cc/Z510XbPX/image.png)](https://postimg.cc/5XSxCMRm)
+[![image.png](https://i.postimg.cc/mDZ45Jn0/image.png)](https://postimg.cc/PL70L3T4)
 
 19. Enter the load balancer name and leave basic configuration as default
 
