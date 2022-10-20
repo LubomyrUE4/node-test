@@ -69,8 +69,8 @@ We have a Heroku pipeline set up, with a staging site (https://point-7-staging.h
 
 Please check with Matt if you have not merged a pull reuqest before, or if either of these checks are failing. Once the branch is merged into master, an updated build will automatically be run in the staging site. Heroku will send a notification to slack when the build is done. To see site statuses, log into the Heroku dashboard (ask Matt for login details). The Heorku dashboard also has the 'promote to production' button, which moves the staging site to production.
 
+# AWS EC2 deployment
 
-# EC2 deployment
 1. Go to www.aws.amazon.com and sign in to your console
 2. Select services tab at the top, then select EC2 under Compute, and this will bring up EC2 dashboard
 
