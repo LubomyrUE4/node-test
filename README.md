@@ -78,28 +78,28 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 
 3. Select Launch Instance
 4. There you should enter the name of your instance, set Amazon Machine Image (AMI) to Ubuntu, use the default Instance type (t2.micro).
-5. Now you have to create a key pair in order to be able to connect to your instance. Here you should enter the name, and in case you are using PuTTY select the .ppk private key file format. Then you should save the key file on your computer.
+5. Now you have to create a key pair in order to be able to connect to your instance. Here you should enter the name, and in case you are using PuTTY select the .ppk private key file format. Then you should save the key file on your computer
 
 [![image.png](https://i.postimg.cc/VkTHM2Bz/image.png)](https://postimg.cc/yDmPCQbG)
 
-6. For Network settings you should use the default settings, except for `Allow HTTP/HTTPs traffic from the internet` checkboxes, you need to enable them.
+6. For Network settings you should use the default settings, except for `Allow HTTP/HTTPs traffic from the internet` checkboxes, you need to enable them
 
 [![image.png](https://i.postimg.cc/Hk2yFp5W/image.png)](https://postimg.cc/DSS0X3BR)
 
-7. So, you can click `Launch istance` now, then go to `Instances` tab and wait for the instance to get running.
-8. In order to make the instance fully public, you would have to go to `Secutiry` tab, select the attached secutiry group.
+7. So, you can click `Launch istance` now, then go to `Instances` tab and wait for the instance to get running
+8. In order to make the instance fully public, you would have to go to `Secutiry` tab, select the attached secutiry group
 
 [![image.png](https://i.postimg.cc/q7yhMdDS/image.png)](https://postimg.cc/rdyFQ7kN)
 
-9. There click `Edit inbound rules` and add a new All traffic rule with '0.0.0.0/0' CIDR block.
+9. There click `Edit inbound rules` and add a new All traffic rule with '0.0.0.0/0' CIDR block
 
 [![image.png](https://i.postimg.cc/k5JG9t86/image.png)](https://postimg.cc/mPnBykmB)
 
-10. If you see that your EC2 instanse has running state, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal. Please make sure you are in the same folder in terminal where your key .pem file is located.
+10. If you see that your EC2 instanse has running state, click `Connect` and go to `SSH client`. There you should find the steps to connect to your instance using terminal. Please make sure you are in the same folder in terminal where your key .pem file is located
 
 [![image.png](https://i.postimg.cc/BQ96hzhn/image.png)](https://postimg.cc/fkCDy8nG)
 
-11. Once you are connected, you can see that there are no files and all the required tools have to be installed.
+11. Once you are connected, you can see that there are no files and all the required tools have to be installed
 12. First of all, install the `npm`: 
 - Run `sudo apt update` (download package information from all configured sources)
 - Run `sudo apt install npm`
@@ -118,4 +118,43 @@ Please check with Matt if you have not merged a pull reuqest before, or if eithe
 
 Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 
-17. NGINX or AWS Load balancer are the tools required for having our application running on default 80/443 ports (without any ':3000' in URL). They would allow you to add SSL certificates and have your application running on the HTTPS.
+17. NGINX or AWS Load Balancer are the tools required for having our application running on default 80/443 ports (without any ':3000' in URL). They would allow you to add SSL certificates and have your application running on the HTTPS. Let us set up the most recommended option - AWS Load Balancer. In the same EC2 section you were in, you should find the `Load Balancers` at the left bottom
+
+[![image.png](https://i.postimg.cc/qRQt2ZMB/image.png)](https://postimg.cc/CBBLg7q9)
+
+18. Then click `Create Load Balancer` and select the `Application Load Balancer`
+
+[![image.png](https://i.postimg.cc/MpYV08bR/image.png)](https://postimg.cc/21V1mMt8)
+
+19. Enter the load balancer name and leave basic configuration as default
+
+[![image.png](https://i.postimg.cc/tJwdZtbg/image.png)](https://postimg.cc/GTPT6DH0)
+
+20. For network settings, use the default VPC and enable at least 2 availability zones (us-west-2a and us-west-2b in my case)
+
+[![image.png](https://i.postimg.cc/RFz0gg1t/image.png)](https://postimg.cc/PL2hxzRf)
+
+21. Use the default security group, and for Listener HTTP:80 create a new target group (to redirect all the HTTP:80 requests to our instance)
+
+[![image.png](https://i.postimg.cc/FH35TNTP/image.png)](https://postimg.cc/hXD5jWWx)
+
+22. You should use all the default settings, except for Port - set it to 3000
+[![image.png](https://i.postimg.cc/fTk0tg8W/image.png)](https://postimg.cc/QHGMvSLv)
+
+23. The next step is to select our instance, click `Include as pending below` and `Create target group`
+
+[![image.png](https://i.postimg.cc/25nHp5Wt/image.png)](https://postimg.cc/HJs0XdB0)
+
+24. Now go back to the `Load balancer` tab and select the new target group
+
+[![image.png](https://i.postimg.cc/R08nT1q5/image.png)](https://postimg.cc/yJmd1ZFv)
+
+25.  If we wanted to allow HTTPS traffic, we would add an HTTPS:443 listener and configure SSL certificates for it
+26.  Everything is set up and you can click `Create load balancer`. In order to find the IP address of it, go to `Network interfaces` and find the one with the ELB app/<load_balancer_name> description. You can see the IPv4 with it.
+
+[![image.png](https://i.postimg.cc/Th89HMwx/image.png)](https://postimg.cc/y3PckGcp)
+
+[![image.png](https://i.postimg.cc/nLs1ZhDx/image.png)](https://postimg.cc/QB37JsmY)
+
+
+27. That is it, in order to test that everything is working, we should open the load balancer address, in my case - http://44.242.131.253 and see that it is working without any additional ports.
