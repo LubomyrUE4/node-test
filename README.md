@@ -126,8 +126,6 @@ Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 
 ![image](https://user-images.githubusercontent.com/60970685/196981023-186835b1-2a22-4ec2-a585-f26e1b02f914.png)
 
-[![image.png](https://i.postimg.cc/1t7qgrt4/image.png)](https://postimg.cc/Q95tw5cr)
-
 19. Enter the load balancer name and leave basic configuration as default
 
 [![image.png](https://i.postimg.cc/tJwdZtbg/image.png)](https://postimg.cc/GTPT6DH0)
