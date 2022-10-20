@@ -138,7 +138,7 @@ Example - `http://ec2-54-212-180-210.us-west-2.compute.amazonaws.com:3000`
 
 21. Use the default security group, and for Listener HTTP:80 create a new target group (to redirect all the HTTP:80 requests to our instance)
 
-[![image.png](https://i.postimg.cc/FH35TNTP/image.png)](https://postimg.cc/hXD5jWWx)
+![image](https://user-images.githubusercontent.com/60970685/196981544-b9547438-9a3e-41a8-9233-e96f9ff405fa.png)
 
 22. You should use all the default settings, except for Port - set it to 3000
 [![image.png](https://i.postimg.cc/fTk0tg8W/image.png)](https://postimg.cc/QHGMvSLv)
